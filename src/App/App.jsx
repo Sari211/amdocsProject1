@@ -9,6 +9,7 @@ import { HomePage } from 'root/pages/HomePage';
 import { LoginPage } from 'root/pages/LoginPage';
 import { RegisterPage } from 'root/pages/RegisterPage';
 import { ListPage } from 'root/pages/ListPage';
+import {MapPage} from 'root/pages/MapPage'
 
 function App() {
     const alert = useSelector(state => state.alert);
@@ -34,6 +35,7 @@ function App() {
                             <Route path="/login" component={LoginPage} />
                             <Route path="/register" component={RegisterPage} />
                             <Route path="/list" component={ListPage} />
+                            <Route path="/maps" component={MapPage} />
                             <Redirect from="*" to="/" />
                         </Switch>
                     </Router>

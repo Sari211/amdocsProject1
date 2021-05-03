@@ -38,9 +38,10 @@ function LoginPage() {
     }
 
     return (
-        <div className="login-page col-lg-8 offset-lg-2">
-            <h2>Login</h2>
+        <div className="container1" >
+            <h2 className="heading">Login</h2>
             <form name="form" onSubmit={handleSubmit}>
+                <div className="form-container">
                 <div className="form-group">
                     <label>Username</label>
                     <input type="text" name="username" value={username} onChange={handleChange} className={'form-control' + (submitted && !username ? ' is-invalid' : '')} />
@@ -55,12 +56,15 @@ function LoginPage() {
                         <div className="invalid-feedback">Password is required</div>
                     }
                 </div>
+                </div>
                 <div className="form-group">
-                    <button className="btn btn-primary">
-                        {loggingIn && <span className="spinner-border spinner-border-sm mr-1"></span>}
+                    <button className="btn-primary">
+                        {loggingIn && <span className="spinner-border spinner-border-sm mr-1" className="submit-btn"></span>}
                         Login
                     </button>
                     <Link to="/register" className="btn btn-link">Register</Link>
+                    <Link to="/maps" className="btn btn-link">Map</Link>
+                    <Link to="/list" className="btn btn-link">List</Link>
                 </div>
             </form>
         </div>

@@ -32,7 +32,8 @@ module.exports = {
         // global app config object
         config: JSON.stringify({
             apiUrl: 'http://localhost:4000',
-            listUrl: 'http://jsonplaceholder.typicode.com'
+    //   listUrl: 'http://jsonplaceholder.typicode.com'
+            listUrl: ' https://next.json-generator.com'
         })
     }
 }

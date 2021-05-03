@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { paginateService } from './paginate.service';
+import { green } from '@material-ui/core/colors';
+import { colors } from 'material-ui/styles';
 
 const propTypes = {
     items: PropTypes.array.isRequired,
@@ -36,12 +38,15 @@ class Pagination extends React.Component {
                 ul: {
                     margin: 0,
                     padding: 0,
-                    display: 'inline-block'
+                    display: 'inline-block',
+                    color:'green'
+                    
                 },
                 li: {
                     listStyle: 'none',
                     display: 'inline',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    
                 },
                 a: {
                     cursor: 'pointer',
@@ -124,7 +129,7 @@ class Pagination extends React.Component {
                     <a className="page-link" onClick={() => this.setPage(pager.totalPages)} style={styles.a}>{labels.last}</a>
                 </li>
             </ul>
-            {pager.currentPage} / {pager.totalPages}
+          <div className="color1"> {pager.currentPage} / {pager.totalPages}</div> 
             </>
         );
     }

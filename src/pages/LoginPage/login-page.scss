@@ -1,3 +1,95 @@
-.login-page{
-  color: red;
+// .login-page{
+//   color: red;
+// }
+.container {
+  background-image: url(https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  /* rgb(182, 228, 212) !important; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  color: #063b37;
+  padding-top: 7px;
+  
+}
+.container {
+  max-width: 800px !important;
+  width: 84%;
+  backdrop-filter: blur(5px);
+  /* background-color:  rgb(240, 253, 249); */
+  border-radius: 9px;
+  opacity: 0.9;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px 26px;
+  box-shadow: 0 0 10px 6px #2a443a25;
+}
+
+form {
+  padding: 7px 16px;
+  width: 100%;
+}
+.form-container {
+  width: 100%;
+}
+label {
+  line-height: 1.9;
+}
+input {
+  display: block;
+  width: 140%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(44, 122, 103);
+}
+.btn-primary {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin-top: 17px;
+  background-color: #063b37;
+  color: rgb(184, 251, 253);
+  border: none;
+  border-radius: 5px;
+}
+
+// .validation-errors {
+//   font-size: 0.8em;
+//   color: rgb(212, 18, 18);
+//   line-height: 1;
+//   margin-top: 0;
+// }
+
+.btn-link, label{
+  color: white;
+}
+.wrp-home
+{
+  background-color: white;
+  border-radius: 5%;
+}
+.color1
+{
+  color:white;
+}
+.color2
+{
+  background: white;
+
+}
+.width1
+{
+  color:blue;
+width: 700px;
+margin-left: 50px;
+}
+.color3
+{
+  color:green;
 }

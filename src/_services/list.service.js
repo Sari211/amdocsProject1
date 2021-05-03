@@ -13,7 +13,9 @@ function getAll() {
         headers: { 'Content-Type': 'application/json' },
     };
 
-    return fetch(`${config.listUrl}/todos`, requestOptions).then(handleResponse);
+    return fetch(`${config.listUrl}/api/json/get/EJ0BKddw5`, requestOptions)
+        .then(handleResponse);
+        // .then(addMockPositions);
 }
 
 function getById(id) {
@@ -22,7 +24,7 @@ function getById(id) {
         headers: { 'Content-Type': 'application/json' },
     };
 
-    return fetch(`${config.listUrl}/todos/${id}`, requestOptions).then(handleResponse);
+    return fetch(`${config.listUrl}/api/json/get/EJ0BKddw5/${id}`, requestOptions).then(handleResponse);
 }
 
 function update(todo) {
@@ -32,7 +34,7 @@ function update(todo) {
         body: JSON.stringify(todo)
     };
 
-    return fetch(`${config.listUrl}/todos/${todo.id}`, requestOptions).then(handleResponse);;
+    return fetch(`${config.listUrl}/api/json/get/EJ0BKddw5/${todo.id}`, requestOptions).then(handleResponse);;
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript
@@ -41,7 +43,7 @@ function _delete(id) {
         method: 'DELETE',
     };
 
-    return fetch(`${config.listUrl}/todos/${id}`, requestOptions);
+    return fetch(`${config.listUrl}/api/json/get/EJ0BKddw5/${id}`, requestOptions);
 }
 
 
@@ -55,4 +57,23 @@ function handleResponse(response) {
 
         return data;
     });
+}
+
+function addMockPositions(data) {
+    data.forEach(object => {
+        object.positions = [getRandomPosition(), getRandomPosition()]
+    });
+    return data;
+}
+
+function getRandomPosition() {
+    return {
+        lat: getRandomNumber(43.655000, 43.656999),
+        lng: getRandomNumber(-79.380000, -79.380999)
+    }
+
+}
+
+function getRandomNumber(min, max) {
+    return +(Math.random() * (max - min) + min).toFixed(6)
 }

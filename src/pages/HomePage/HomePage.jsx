@@ -18,7 +18,8 @@ function HomePage() {
     }
 
     return (
-        <div className="col-lg-8 offset-lg-2">
+        <div className="wrp-home">
+            <div className="col-lg-8 offset-lg-2" >
             <h1>Hi {user.firstName}!</h1>
             <h3>All registered users:</h3>
             {users.loading && <em>Loading users...</em>}
@@ -37,10 +38,14 @@ function HomePage() {
                     )}
                 </ul>
             }
+
+            <Link to="/list">List</Link>
             <p>
                 <Link to="/login">Logout</Link>
             </p>
         </div>
+        </div>
+        
     );
 }
 

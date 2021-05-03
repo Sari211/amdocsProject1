@@ -23,15 +23,35 @@ function RegisterPage() {
     function handleChange(e) {
         const { name, value } = e.target;
         setUser(user => ({ ...user, [name]: value }));
+        if(e.target==password)
+        {
+           checking();
+        }
+    }
+    function checking(e)
+    {
+        if(e.value<5)
+        {
+            alert('it isnt good');
+        }
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-
-        setSubmitted(true);
-        if (user.firstName && user.lastName && user.username && user.password) {
-            dispatch(userActions.register(user));
-        }
+           setSubmitted(true);
+            if (user.firstName && user.lastName && user.username && user.password)
+            {
+                if(user.username.length>2&&user.password.length>6&&/a-z/.test(user.password))
+               
+               {
+                dispatch(userActions.register(user));
+               }
+                else
+                alert('the ditials isnt good');
+            }
+       
+        
+ 
     }
 
     return (
